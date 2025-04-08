@@ -46,7 +46,7 @@ int main(int argc, char **argv){
     pthread_t *tid_sistema;
     t_Ret  *retorno;
 
-    FILE *arquivo = fopen("resultado.bin", "rb");
+    FILE *arquivo = fopen(argv[2], "rb");
     fread(&n, sizeof(int), 1, arquivo);
 
     float *vetor1 = (float*) malloc(sizeof(float)*n);
